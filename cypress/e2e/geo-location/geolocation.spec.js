@@ -26,7 +26,7 @@ describe("Geolocation tests", () => {
     cy.contains("p", "United States");
   });
 
-  it.only("test Geo Location", () => {
+  it("test Geo Location", () => {
     const latitude = 51.507351;
     const longitude = -0.127758;
     cy.visit("cypress/e2e/geo-location/index.html", {
@@ -36,7 +36,7 @@ describe("Geolocation tests", () => {
         });
       },
     });
-    cy.contains("button", "Click me").click();
+    cy.contains("button", "Get Location Details").click();
     cy.contains(
       `Your current location is (Latitude: ${latitude}, Longitude: ${longitude})`
     );
